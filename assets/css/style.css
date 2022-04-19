@@ -85,7 +85,7 @@ sub { bottom: -.25em; }
 body {
   box-sizing: border-box;
   background-color: #000;
-  color: #4b4a47;
+  color: #53533a;
   font-family: "Poppins", sans-serif;
 }
 
@@ -179,9 +179,6 @@ li {
   color: #fff;
 }
 
-
-
-
 /*=================================
   Header styling ends here
 =================================*/  
@@ -229,13 +226,9 @@ li {
   counter section styling starts here
 =================================*/
 
-.counter-section {
-  padding: 80px 0;
-}
+.counter-section { margin: 80px 0; }
 
-.counter-list {
-  display: flex;
-}
+.counter-list { display: flex; }
 
 .counter-item {
   flex-basis: 25%;
@@ -277,6 +270,62 @@ li {
 /*=================================
   counter section styling ends here
 =================================*/
+
+/*=================================
+  get in touch styling starts here
+=================================*/ 
+
+.get-in-touch-section .wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.get-in-touch-text {
+  flex-basis: 40%;
+}
+
+.section-title {
+  margin: 45px 0 27px;
+  color: #53d494;
+  font-size: 47px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+
+.section-info {
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.get-in-touch-img img{
+  box-shadow: 10px 10px #53d494;
+}
+
+.get-in-touch-btn {
+  position: absolute;
+  bottom: 132px;
+  left: 0;
+}
+
+.get-in-touch-btn a {
+  padding: 21px 27px;
+  border: 1px solid #53d494;
+  background-color: #53d494;
+  color: #000;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.get-in-touch-btn a:hover {
+  background-color: transparent;
+  color: #53d494;
+}
+
+/*=================================
+  get in touch styling ends here
+=================================*/ 
 
 /*=================================
   main styling ends here
