@@ -13,10 +13,10 @@
   <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
   <link rel="shortcut icon" href="favicon.ico" />
   <!--font-awesome link for icons-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <!-- google font link -->
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-   rel="stylesheet">  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+  <!-- google font link -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
   <!-- jquery link for functionalities -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
@@ -34,19 +34,19 @@
             <img src="https://via.placeholder.com/67x20.png/fff?text=Gymer" alt="logo"></a>
         </h1>
         <div class="menu-section">
-         <nav class="nav-section">
-          <ul class="nav-list">
-            <li class="nav-items active"><a href="/" title="Home">home</a></li>
-            <li class="nav-items"><a href="#classes" title="Classes">classes</a></li>
-            <li class="nav-items"><a href="#schedule" title="Schedule">schedule</a></li>
-            <li class="nav-items"><a href="#trainers" title="Trainer">trainer</a></li>
-            <li class="nav-items"><a href="#services" title="Services">services</a></li>
-          </ul>
-        </nav>
-        <div class="control-btn">
-          <button class="hamburger-btn">1</button>
+          <nav class="nav-section">
+            <ul class="nav-list">
+              <li class="nav-items active"><a href="/" title="Home">home</a></li>
+              <li class="nav-items"><a href="#classes" title="Classes">classes</a></li>
+              <li class="nav-items"><a href="#schedule" title="Schedule">schedule</a></li>
+              <li class="nav-items"><a href="#trainers" title="Trainer">trainer</a></li>
+              <li class="nav-items"><a href="#services" title="Services">services</a></li>
+            </ul>
+          </nav>
+          <div class="control-btn">
+            <button class="hamburger-btn">1</button>
+          </div>
         </div>
-      </div>
         <div class="contact-btn-div">
           <a href="#FIXME" title="Contact" target="_self" class="contact-btn btn">contact</a>
         </div>
@@ -63,24 +63,32 @@
       </div>
       <!--banner section end-->
       <!--counter section start-->
-      <div class="counter-setion">
+      <div class="counter-section">
         <div class="wrapper">
           <ul class="counter-list">
             <li class="counter-item members">
-              <span class="count">2260</span>
-              <span class="count-name">members</span>
+              <div class="counter-item-data">
+                <span class="count">2,260</span>
+                <span class="count-name">members</span>
+              </div>
             </li>
             <li class="counter-item daily-visitors">
-              <span class="count">210</span>
-              <span class="count-name">daily visitors</span>
+              <div class="counter-item-data">
+                <span class="count">210</span>
+                <span class="count-name">daily visitors</span>
+              </div>
             </li>
             <li class="counter-item health-program">
-              <span class="count">887</span>
-              <span class="count-name">health program</span>
+              <div class="counter-item-data">
+                <span class="count">887</span>
+                <span class="count-name">health program</span>
+              </div>
             </li>
             <li class="counter-item heart-beat">
-              <span class="count">1920</span>
-              <span class="count-name">heart beat</span>
+              <div class="counter-item-data">
+                <span class="count">1,920</span>
+                <span class="count-name">heart beat</span>
+              </div>
             </li>
           </ul>
         </div>
@@ -156,52 +164,54 @@
       <section class="schedule" id="schedule">
         <div class="wrapper">
           <div class="section-text">
-          <h2 class="section-title">schedule</h2>
-          <p class="section-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime natus, eos deserunt reiciendis repellat error quidem dolores velit consectetur molestias magnam corporis possimus harum culpa dignissimos sunt labore? Doloribus, veniam?</p>
+            <h2 class="section-title">schedule</h2>
+            <p class="section-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime natus, eos deserunt
+              reiciendis repellat error quidem dolores velit consectetur molestias magnam corporis possimus harum culpa
+              dignissimos sunt labore? Doloribus, veniam?</p>
+          </div>
+          <div class="weekly-schedule">
+            <ul class="day-list">
+              <li><button class="selected day">monday</button></li>
+              <li><button class="day">tuesday</button></li>
+              <li><button class="day">wednesday</button></li>
+              <li><button class="day">thursday</button></li>
+              <li><button class="day">friday</button></li>
+              <li><button class="day">sunday</button></li>
+            </ul>
+            <ul class="time-table">
+              <li class="time-table-item">
+                <p class="exercise-type">gym</p>
+                <p class="timing">8:00am - 10:00am</p>
+                <p class="trainer-name">john doe</p>
+                <a href="#FIXME" class="join-btn" target="_self" title="Join Now">join now</a>
+              </li>
+              <li class="time-table-item">
+                <p class="exercise-type">meditation</p>
+                <p class="timing">10:00am - 10:30am</p>
+                <p class="trainer-name">james holmes</p>
+                <a href="#FIXME" class="join-btn" target="_self" title="Join Now">join now</a>
+              </li>
+              <li class="time-table-item">
+                <p class="exercise-type">weight lifting</p>
+                <p class="timing">1:00pm - 2:30px</p>
+                <p class="trainer-name">ben smith</p>
+                <a href="#FIXME" class="join-btn" target="_self" title="Join Now">join now</a>
+              </li>
+              <li class="time-table-item">
+                <p class="exercise-type">crossfit</p>
+                <p class="timing">3:00am - 3:45am</p>
+                <p class="trainer-name">craig peters</p>
+                <a href="#FIXME" class="join-btn" target="_self" title="Join Now">join now</a>
+              </li>
+              <li class="time-table-item">
+                <p class="exercise-type">aerobics</p>
+                <p class="timing">5:00am - 5:30am</p>
+                <p class="trainer-name">paul green</p>
+                <a href="#FIXME" class="join-btn" target="_self" title="Join Now">join now</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="weekly-schedule">
-          <ul class="day-list">
-            <li><button class="selected day">monday</button></li>
-            <li><button class="day">tuesday</button></li>
-            <li><button class="day">wednesday</button></li>
-            <li><button class="day">thursday</button></li>
-            <li><button class="day">friday</button></li>
-            <li><button class="day">sunday</button></li>
-          </ul>
-          <ul class="time-table">
-            <li class="time-table-item">
-              <p class="exercise-type">gym</p>
-              <p class="timing">8:00am - 10:00am</p>
-              <p class="trainer-name">john doe</p>
-              <a href="#FIXME" class="join-btn" target="_self" title="Join Now">join now</a>
-            </li>
-            <li class="time-table-item">
-              <p class="exercise-type">meditation</p>
-              <p class="timing">10:00am - 10:30am</p>
-              <p class="trainer-name">james holmes</p>
-              <a href="#FIXME" class="join-btn" target="_self" title="Join Now">join now</a>
-            </li>
-            <li class="time-table-item">
-              <p class="exercise-type">weight lifting</p>
-              <p class="timing">1:00pm - 2:30px</p>
-              <p class="trainer-name">ben smith</p>
-              <a href="#FIXME" class="join-btn" target="_self" title="Join Now">join now</a>
-            </li>
-            <li class="time-table-item">
-              <p class="exercise-type">crossfit</p>
-              <p class="timing">3:00am - 3:45am</p>
-              <p class="trainer-name">craig peters</p>
-              <a href="#FIXME" class="join-btn" target="_self" title="Join Now">join now</a>
-            </li>
-            <li class="time-table-item">
-              <p class="exercise-type">aerobics</p>
-              <p class="timing">5:00am - 5:30am</p>
-              <p class="trainer-name">paul green</p>
-              <a href="#FIXME" class="join-btn" target="_self" title="Join Now">join now</a>
-            </li>
-          </ul>
-        </div>
-      </div>
       </section>
       <!--schedule section end-->
       <!-- trainers section start -->
@@ -315,14 +325,14 @@
           <p class="section-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi velit
             consect adipisicing elit. Officia, recusandae.</p>
           <form action="/" class="contact-form">
-              <div class="form-group form-group-name">
-                <input type="text" name="fName" value="" placeholder="First Name">
-                <span class="error">error</span>
-              </div>
-              <div class="form-group form-group-name">
-                <input type="text" name="lName" value="" placeholder="Last Name">
-                <span class="error">error</span>
-              </div>
+            <div class="form-group form-group-name">
+              <input type="text" name="fName" value="" placeholder="First Name">
+              <span class="error">error</span>
+            </div>
+            <div class="form-group form-group-name">
+              <input type="text" name="lName" value="" placeholder="Last Name">
+              <span class="error">error</span>
+            </div>
             <div class="form-group">
               <input type="text" name="subject" value="" placeholder="Subject">
               <span class="error">error</span>
@@ -332,8 +342,7 @@
               <span class="error">error</span>
             </div>
             <div class="form-group">
-              <textarea name="message" cols="30" rows="10"
-                placeholder="Write your message here."></textarea>
+              <textarea name="message" cols="30" rows="10" placeholder="Write your message here."></textarea>
             </div>
             <div class="form-control">
               <button type="submit" class="btn submit-btn">send message</button>
