@@ -186,7 +186,7 @@ li {
 
 .banner {
   height: 100vh;
-  background-image: url("../image/bg.jpg"), linear-gradient(to right, #f1b1b1 , #82e6e8);
+  background-image: url("../image/bg.jpg");
   background-position: center; 
   background-repeat: no-repeat;
   background-size: cover;
@@ -216,7 +216,7 @@ li {
   counter section styling starts here
 =================================*/
 
-.counter-section { margin: 80px 0; }
+.counter-section { padding: 80px 0; }
 
 .counter-list { display: flex; }
 
@@ -318,7 +318,7 @@ li {
  classes styling ends here
 =================================*/ 
 
-.classes { margin: 175px 0; }
+.classes { padding: 175px 0; }
 
 .section-text { width: 47.5%; }
 
@@ -419,7 +419,7 @@ li {
  trainers styling starts here
 =================================*/
 
-.trainers-section { margin: 150px 0 200px; }
+.trainers-section { padding: 150px 0 200px; }
 
 .trainers {
   display: flex;
@@ -772,13 +772,13 @@ textarea { margin-bottom: 8px; }
 
   .count-name, .section-info { font-size: 12px; }
 
-  .classes { margin: 100px 0; }
+  .classes { padding: 100px 0; }
 
   .time-table-item p, .time-table-item a { font-size: 14px; }
 
   .day-list { width: 100%; }
 
-  .trainers-section { margin: 80px 0; }
+  .trainers-section { padding: 80px 0; }
 
   .trainers-section .trainer-name { font-size: 20px; }
 
@@ -842,7 +842,7 @@ textarea { margin-bottom: 8px; }
 
   .banner-title { font-size: 70px; }
 
-  .counter-section { margin: 50px 0; }
+  .counter-section { padding: 50px 0; }
 
   .counter-item::before { font-size: 25px; }
 
@@ -867,7 +867,7 @@ textarea { margin-bottom: 8px; }
     font-size: 30px; 
   }
 
-  .classes { margin: 80px 0 60px; }
+  .classes { padding: 80px 0 60px; }
 
   .day {
     padding: 10px 15px;
@@ -879,7 +879,7 @@ textarea { margin-bottom: 8px; }
     font-size: 10px;
   }
 
-  .trainers-section { margin: 20px 0; }
+  .trainers-section { padding: 20px 0; }
 
   .trainers {
     margin-top: 35px;
@@ -915,7 +915,6 @@ textarea { margin-bottom: 8px; }
 
 @media only screen and (max-width: 425px) {
 
-
   .banner-title { font-size: 50px; }
 
   .counter-list { 
@@ -938,9 +937,7 @@ textarea { margin-bottom: 8px; }
 
   .get-in-touch-img img { width: 100%; }
 
-  .get-in-touch-btn {
-    bottom: 0;
-  }
+  .get-in-touch-btn { bottom: 0; }
 
   .gym-classes { padding: 20px; }
 
