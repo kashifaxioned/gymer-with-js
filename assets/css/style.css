@@ -204,9 +204,7 @@ li {
 }
 
 .banner .wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   color: #fff;
 }
 
@@ -214,7 +212,6 @@ li {
   font-size: 120px;
   font-weight: 700;
   line-height: 1;
-  text-align: center;
   text-transform: capitalize;
 }
 
@@ -325,6 +322,44 @@ li {
 
 /*=================================
   get in touch styling ends here
+=================================*/ 
+
+
+/*=================================
+ classes styling ends here
+=================================*/ 
+
+.classes {
+  margin: 175px 0;
+}
+
+.section-text {
+  width: 47.5%;
+}
+
+.gym-slider {
+  margin-top: 60px;
+  display: flex;
+  overflow: hidden;
+}
+
+.radio-section {
+  margin: 45px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.radio-btn {
+  padding: 5px;
+  border: none;
+  border-radius: 50%;
+}
+
+.active-slide { background-color: #53d494; }
+
+/*=================================
+ classes styling ends here
 =================================*/ 
 
 /*=================================
