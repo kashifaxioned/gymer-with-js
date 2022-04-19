@@ -330,17 +330,17 @@ li {
  classes styling ends here
 =================================*/ 
 
-.classes {
-  margin: 175px 0;
-}
+.classes { margin: 175px 0; }
 
-.section-text {
-  width: 47.5%;
-}
+.section-text { width: 47.5%; }
 
 .gym-slider {
   display: flex;
   overflow: hidden;
+}
+
+.slide-img {
+  flex-basis: 20%;
 }
 
 .radio-section {
@@ -405,6 +405,8 @@ li {
   border-bottom: .3px solid #c6cace; 
 }
 
+.time-table-item a { padding-left: 0; }
+
 .exercise-type { flex-basis: 24.2%; }
 
 .timing { flex-basis: 32.7%; }
@@ -444,7 +446,7 @@ li {
 
 .trainer-text { margin-top: 52px; }
 
-.trainer-name {
+.trainers-section .trainer-name {
   color: #fff;
   font-size: 26px;
   text-transform: capitalize;
@@ -470,6 +472,7 @@ li {
  service styling starts here
 =================================*/ 
 
+.service { padding-bottom: 50px; }
 
 .card-section { 
   display: flex;
@@ -507,16 +510,10 @@ li {
 
 .gym::before { content: "\f44b"; }
 
-.service-section .font-icon::before { 
-  color: #fff; 
-  font-size: 50px;
-}
-
 
 /*=================================
  service styling ends here
 =================================*/ 
-
 
 /*=================================
   main styling ends here
@@ -526,11 +523,139 @@ li {
   footer styling starts here
 =================================*/ 
 
+/*=================================
+  contact styling starts here
+=================================*/ 
 
+.contact-section .wrapper { width: 32.8%; }
 
+.contact-section {
+  padding: 55px 0 100px;
+  background-color: #121212;
+}
 
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
+.error { display: none; }
 
+.form-group {
+  box-sizing: border-box;
+  flex-basis: 100%;
+  background: none;
+}
+
+input, textarea {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 15px;
+  border: 2px solid #fff;
+  padding: 8px 11px;
+  background: none;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+textarea { margin-bottom: 8px; }
+
+.form-group-name { flex-basis: calc(50% - 15px); }
+
+.submit-btn {
+  padding: 21px 102px;
+  border: 1px solid #53d494;
+  background-color: #53d494;
+  font-size: 11.5px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.error { display: none; }
+
+/*=================================
+  contact styling ends here
+=================================*/ 
+
+/*=================================
+  footer-info styling starts here
+=================================*/ 
+
+.footer-info {
+  margin: 117px 0;
+  color: #fff;
+  }
+  
+  .footer-info .wrapper {
+  display: flex;
+  justify-content: space-between;
+  }
+  
+  .footer-info a, .copyright a {
+  color: #53d494;
+  text-transform: capitalize;
+  }
+  
+  .about, .subscribe { flex-basis: 31.7%; }
+  
+  .links { flex-basis: 15%; }
+  
+  .footer-info-title {
+  margin-bottom: 21px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  }
+  
+  .footer-info-text {
+  color: #474e46;
+  font-size: 16px;
+  line-height: 1.7;
+  }
+  
+  .links-list {
+  display: flex;
+  flex-direction: column;
+  }
+  
+  .links-list li { margin-bottom: 12px; }
+  
+  .subscribe-form {
+  box-sizing: border-box;
+  margin-top: 14px;
+  display: flex;
+  }
+  
+  .subscribe-form input{
+  margin: 0;
+  border-radius: 0;
+  }
+  
+  .sub-btn {
+  box-sizing: border-box;
+  padding: 15px 12px;
+  border: 1px solid #53d494;
+  border-radius: 0;
+  background-color: #53d494;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1;
+  }
+  
+  /*=================================
+  footer-info styling ends here
+  =================================*/ 
+  
+  /* copyright section starts here */
+  
+  .copyright { padding: 68px 0 143px; }
+  
+  .copyright-text {
+  color: #474e46;
+  font-size: 15px;
+  text-align: center;
+  }
 
  /*=================================
   footer styling ends here
@@ -538,8 +663,316 @@ li {
 
 /*media query starts*/
 /*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
+@media only screen and (max-width: 2560px) and (min-width: 2000px) {
+
+  .banner-title { font-size: 150px; }
+
+  .count { font-size: 52px; }
+
+  .count-name { font-size: 20px; }
+
+  .section-title { font-size: 60px; }
+
+  .section-info { font-size: 21px; }
+
+  .get-in-touch-btn { bottom: 15%; }
+
+  .trainers-section .trainer-name { font-size: 35px; }
+
+  .trainer-speciality { font-size: 20px; }
+
+  .trainer-info { font-size: 18px; }
+
+  .cards::before { font-size: 60px; }
+
+  .card-title { font-size: 40px; }
+
+  .card-info { font-size: 23px; }
+
+  .footer-info-title { font-size: 20px; }
+
+  .footer-info-text { font-size: 18px; }
+}
+
+/*media query for 2560px to 2000px ends here*/
+
+/*media query for 1440px starts here*/
+
+@media only screen and (max-width: 1440px) {
+
+  .wrapper { width: 70%; }
+  
+  .nav-section { flex-basis: 55%; }
+
+  .get-in-touch-btn { bottom: 3%; }
+
+  .day-list { width: 100%; }
+
+  .count { font-size: 37px; }
+
+  .contact-section .wrapper { width: 40%; }
+
+  .cards { padding: 50px 40px; }
+
+  .submit-btn { padding: 21px 70px; }
+}
+
+/*media query for 1440px ends here*/
+
+/*media query for 1280px starts here*/
+
+@media only screen and (max-width: 1280px) {
+
+  .nav-section { flex-basis: 65%; }
+
+  .banner-title { font-size: 100px; }
+
+  .get-in-touch-img figure { 
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .get-in-touch-img img { width: 80%; }
+
+  .get-in-touch-btn { bottom: 0; }
+
+  .get-in-touch-btn a { padding: 15px 27px; }
+
+}
+
+/*media query for 1280px ends here*/
 
 
+/*media query for 1024px starts here*/
+
+@media only screen and (max-width: 1024px) {
+
+  .nav-section { flex-basis: 70%; }
+
+  .banner-title { font-size: 80px; }
+
+  .counter-item { gap: 15px; }
+
+  .counter-item::before { font-size: 35px; }
+
+  .count { font-size: 30px; }
+
+  .section-title { font-size: 35px; }
+
+  .count-name, .section-info { font-size: 12px; }
+
+  .classes { margin: 100px 0; }
+
+  .time-table-item p, .time-table-item a { font-size: 14px; }
+
+  .day-list { width: 100%; }
+
+  .trainers-section { margin: 80px 0; }
+
+  .trainers-section .trainer-name { font-size: 20px; }
+
+  .trainer-speciality { 
+    margin: 10px 0 20px;
+    font-size: 13px; 
+  }
+
+  .trainer-info { font-size: 12px; }
+
+  .service { padding-bottom: 0; }
+
+  .cards::before { font-size: 33px; }
+
+  .card-title {
+    margin: 17px 0;
+    font-size: 21px;
+  }
+
+  .card-info { font-size: 12px; }
+
+  .contact-section .wrapper { width: 50%; }
+
+  .footer-info-text { font-size: 12px; }
+}
+
+/*media query for 1024px ends here*/
+
+/*media query for 768px starts here*/
+@media only screen and (max-width: 768px) {
+
+  .wrapper { width: 80%; }
+
+  .header-section { right: 5.7%; }
+
+  .header-section .wrapper { justify-content: space-between; }
+
+  .nav-section { display: none; }
+
+  .control-btn { 
+    margin-left: auto;
+    display: block;
+  }
+
+  .hamburger-btn {
+    color: #fff;
+    background: none;
+    border: none;
+    overflow: hidden;
+    text-indent: -13px;
+  }
+
+  .hamburger-btn::after {
+    color: #fff;
+    content: "\f0c9";
+    font-size: 30px;
+    font-family: "FontAwesome";
+  }
+
+  .contact-btn-div { display: none; }
+
+  .banner-title { font-size: 70px; }
+
+  .counter-section { margin: 50px 0; }
+
+  .counter-item::before { font-size: 25px; }
+
+  .count { font-size: 22px; }
+
+  .count-name { font-size: 10px; }
+  
+  .section-info { 
+    margin-bottom: 30px;
+    font-size: 10px; 
+  }
+
+  .get-in-touch-text { flex-basis: 55%; }
+
+  .get-in-touch-btn a { 
+    padding: 10px 20px; 
+    font-size: 10px;
+  }
+
+  .section-title { 
+    margin: 30px 0 15px;
+    font-size: 30px; 
+  }
+
+  .classes { margin: 80px 0 60px; }
+
+  .day {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .time-table-item p, .time-table-item a {
+    padding: 17px 10px;
+    font-size: 10px;
+  }
+
+  .trainers-section { margin: 20px 0; }
+
+  .trainers {
+    margin-top: 35px;
+    flex-direction: column;
+  }
+
+  .trainer-list:not(:last-child) { margin: 0 0 40px; }
+
+  .trainer-speciality { margin: 17px 0; }
+
+  .contact-section { padding: 40px 0; }
+
+  .contact-section .wrapper { width: 70%; }
+
+  .footer-info { margin: 80px 0; }
+
+  .footer-info .wrapper {
+    width: 50%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-info .wrapper > div { margin: 10px 0; }
+
+  .copyright {padding: 50px; }
 
 }  
+
+/*media query for 768px ends here*/
+
+
+/*media query for 425px starts here*/
+
+@media only screen and (max-width: 425px) {
+
+
+  .banner-title { font-size: 50px; }
+
+  .counter-list { 
+    justify-content: space-between;
+    flex-wrap: wrap; 
+  }
+
+  .counter-item { flex-basis: 40%; }  
+
+  .section-title { 
+    padding-bottom: 10px;
+    font-size: 22px;
+  }
+
+  .section-text { width: 90%; }
+
+  .get-in-touch-section .wrapper { 
+    padding-bottom: 90px;
+    flex-direction: column; }
+
+  .get-in-touch-img img { width: 100%; }
+
+  .get-in-touch-btn {
+    bottom: 0;
+  }
+
+  .gym-classes { padding: 20px; }
+
+  .radio-btn { padding: 3px; }
+
+  .weekly-schedule { 
+    margin: 10px 0;
+    flex-direction: row; 
+    align-items: baseline;
+  }
+
+  .time-table { 
+    border: none;
+    flex-basis: 100%;
+  }
+
+  .time-table p, .time-table a {
+    border: none;
+    padding: 10px;
+  }
+
+  .time-table-item {
+    border: 1px solid;
+    margin-bottom: 10px;
+    display: block;
+    flex-basis: 100%;
+  }
+
+  .day-list {
+    flex-basis: 50%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cards { padding: 16px; }
+
+  .contact-section { padding: 30px 0; }
+
+  .contact-section .wrapper { width: 90%; }
+
+  .submit-btn { padding: 20px 40px; }
+
+  .footer-info .wrapper { width: 80%; }
+}
+
+/*media query for 425px ends here*/
