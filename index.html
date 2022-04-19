@@ -19,6 +19,8 @@
     rel="stylesheet">
   <!-- jquery link for functionalities -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- slick slider css styling  -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
   <link rel="stylesheet" media="screen" href="assets/css/style.css">
 </head>
@@ -107,7 +109,7 @@
             <figure><img src="./assets/image/1.jpg" alt="Get In Touch"></figure>
           </div>
           <div class="get-in-touch-btn">
-            <a href="#FIXME" title="Contact" target="_self" class="communicate-btn btn">get in touch</a>
+            <a href="#FIXME" title="Contact" target="_self" class="btn">get in touch</a>
           </div>
         </div>
       </section>
@@ -121,7 +123,8 @@
               est et sapiente id asperiores? Veniam deleniti, perferendis error nemo dolorem quia officiis, ut
               similique, magnam ullam placeat.</p>
           </div>
-          <ul class="gym-slider">
+        </div>
+        <ul class="gym-slider">
             <li class="slide-img">
               <figure>
                 <img src="./assets/image/gym-gallery/6.jpg" alt="Man Doing Triceps Workout">
@@ -153,11 +156,10 @@
               </figure>
             </li>
           </ul>
-          <div class="radio-section">
-            <button type="button" class="radio-btn active-slide"></button>
-            <button type="button" class="radio-btn"></button>
+        <div class="radio-section">
+            <button type="button" class="gym-slider-radio-btn radio-btn active-slide"></button>
+            <button type="button" class="gym-slider-radio-btn radio-btn"></button>
           </div>
-        </div>
       </section>
       <!--classes section end-->
       <!--schedule section start-->
@@ -215,7 +217,7 @@
       </section>
       <!--schedule section end-->
       <!-- trainers section start -->
-      <section class="trainers" id="trainers">
+      <section class="trainers-section" id="trainers">
         <div class="wrapper">
           <div class="section-text">
             <h2 class="section-title">trainers</h2>
@@ -287,19 +289,19 @@
               consequatur eaque. Quas corporis ut aut!</p>
           </div>
           <ul class="card-section">
-            <li class="cards crossfit font-icon">
+            <li class="cards crossfit">
               <h3 class="card-title">crossfit</h3>
               <p class="card-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas quia
                 fugit, minus
                 harum nobis similique.</p>
             </li>
-            <li class="cards aerobics font-icon">
+            <li class="cards aerobics">
               <h3 class="card-title">aerobics</h3>
               <p class="card-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas quia
                 fugit, minus
                 harum nobis similique.</p>
             </li>
-            <li class="cards gym font-icon">
+            <li class="cards gym">
               <h3 class="card-title">gym</h3>
               <p class="card-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas quia
                 fugit, minus
@@ -343,6 +345,7 @@
             </div>
             <div class="form-group">
               <textarea name="message" cols="30" rows="10" placeholder="Write your message here."></textarea>
+              <span class="error">error</span>
             </div>
             <div class="form-control">
               <button type="submit" class="btn submit-btn">send message</button>
@@ -397,6 +400,7 @@
   </div>
   <!--container end-->
   <script src="assets/js/script.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
 
 </html>
