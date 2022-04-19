@@ -84,6 +84,8 @@ sub { bottom: -.25em; }
 /*for all*/
 body {
   box-sizing: border-box;
+  background-color: #000;
+  color: #4b4a47;
   font-family: "Poppins", sans-serif;
 }
 
@@ -188,6 +190,10 @@ li {
   main styling starts here
 =================================*/
 
+/*=================================
+  banner styling starts here
+=================================*/
+
 .banner {
   height: 100vh;
   background-image: url("../image/bg.jpg"), linear-gradient(to right, #f1b1b1 , #82e6e8);
@@ -215,11 +221,62 @@ li {
   text-transform: capitalize;
 }
 
+/*=================================
+  banner styling ends here
+=================================*/
 
+/*=================================
+  counter section styling starts here
+=================================*/
 
+.counter-section {
+  padding: 80px 0;
+}
 
+.counter-list {
+  display: flex;
+}
 
+.counter-item {
+  flex-basis: 25%;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
 
+.counter-item-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.counter-item::before {
+  font-family: "FontAwesome";
+  font-size: 45px;
+  color: #53d494;
+}
+
+.members::before { content: "\f70c"; }
+
+.daily-visitors::before { content: "\f84a"; }
+
+.health-program::before { content:  "\e3b2"; }
+
+.heart-beat::before { content:  "\f21e"; }
+
+.count {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.count-name {
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+/*=================================
+  counter section styling ends here
+=================================*/
 
 /*=================================
   main styling ends here
