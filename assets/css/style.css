@@ -294,6 +294,7 @@ li {
 .section-info {
   font-size: 17px;
   line-height: 1.8;
+  margin-bottom: 60px;
 }
 
 .get-in-touch-img img{
@@ -338,7 +339,6 @@ li {
 }
 
 .gym-slider {
-  margin-top: 60px;
   display: flex;
   overflow: hidden;
 }
@@ -360,6 +360,69 @@ li {
 
 /*=================================
  classes styling ends here
+=================================*/ 
+
+/*=================================
+ schedule styling starts here
+=================================*/ 
+
+.day-list {
+  display: flex;
+  justify-content: center;
+}
+
+.day {
+  padding: 13px 18px;
+  border: none;
+  border-radius: 5px;
+  background: none;
+  color: #53d494;
+  font-size: 17px;
+  text-transform: capitalize;
+}
+
+.selected, .day:hover {
+  background-color: #53d494;
+  color: #fff;
+}
+
+.time-table {
+  margin-top: 47px;
+  border: 1px solid #c6cace;
+  display: flex;
+  flex-direction: column;
+  color: #c6cace;
+}
+
+.time-table-item {
+  flex-basis: 100%;
+  display: flex;
+}
+
+.time-table-item p, .time-table-item a { 
+  padding: 20px 0 21px 10px;
+  border-right: .3px solid #c6cace;
+  border-bottom: .3px solid #c6cace; 
+}
+
+.exercise-type { flex-basis: 24.2%; }
+
+.timing { flex-basis: 32.7%; }
+
+.weekly-schedule .trainer-name { flex-basis: 24.4%; }
+
+.exercise-type, .trainer-name { text-transform: capitalize; }
+
+.join-btn {
+  border-right: none;
+  flex-basis: 17%;
+  color: #53d494;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+/*=================================
+ schedule styling ends here
 =================================*/ 
 
 /*=================================
