@@ -429,28 +429,20 @@ li {
  trainers styling starts here
 =================================*/
 
-.trainers-section {
-  margin: 150px 0 200px;
-}
+.trainers-section { margin: 150px 0 200px; }
 
 .trainers {
   display: flex;
   justify-content: space-between;
 }
 
-.trainer-list {
-  flex-basis: 29.2%;
-}
+.trainer-list { flex-basis: 29.2%; }
 
 .trainer-list:nth-of-type(2n) { margin-top: 50px; }
 
-.trainer-img img {
-  box-shadow: 10px 10px #53d494;
-}
+.trainer-img img { box-shadow: 10px 10px #53d494; }
 
-.trainer-text {
-  margin-top: 52px;
-}
+.trainer-text { margin-top: 52px; }
 
 .trainer-name {
   color: #fff;
@@ -472,6 +464,59 @@ li {
 /*=================================
  trainers styling ends here
 =================================*/ 
+
+
+/*=================================
+ service styling starts here
+=================================*/ 
+
+
+.card-section { 
+  display: flex;
+  justify-content: space-between;
+  color: #fff; 
+}
+
+.cards {
+  box-sizing: border-box;
+  padding: 70px 63px;
+  flex-basis: 31.5%;
+  background-color: #53d494;
+}
+
+.card-title {
+  margin: 35px 0;
+  font-size: 25px;
+  text-transform: capitalize;
+}
+
+.card-info {
+  color: #c1f1db;
+  font-weight: 100;
+  line-height: 2;
+}
+
+.cards::before {
+  font-family: "FontAwesome";
+  font-size: 51px;  
+}
+
+.crossfit::before { content: "\f787"; }
+
+.aerobics::before { content: "\f21e"; }
+
+.gym::before { content: "\f44b"; }
+
+.service-section .font-icon::before { 
+  color: #fff; 
+  font-size: 50px;
+}
+
+
+/*=================================
+ service styling ends here
+=================================*/ 
+
 
 /*=================================
   main styling ends here
