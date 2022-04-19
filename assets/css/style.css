@@ -148,8 +148,6 @@ li {
   text-transform: capitalize;
 }
 
-.nav-items a:hover { color: #53d494; }
-
 .active {
   border-bottom: 2px solid #fff;
   padding-bottom: 3px;
@@ -172,11 +170,6 @@ li {
   padding: 8px 19px;
   border: 1px solid #53d494;
   color: #53d494;
-}
-
-.contact-btn:hover {
-  background-color: #53d494;
-  color: #fff;
 }
 
 /*=================================
@@ -316,11 +309,6 @@ li {
   font-weight: 700;
 }
 
-.get-in-touch-btn a:hover {
-  background-color: transparent;
-  color: #53d494;
-}
-
 /*=================================
   get in touch styling ends here
 =================================*/ 
@@ -381,7 +369,7 @@ li {
   text-transform: capitalize;
 }
 
-.selected, .day:hover {
+.selected {
   background-color: #53d494;
   color: #fff;
 }
@@ -663,6 +651,29 @@ textarea { margin-bottom: 8px; }
 
 /*media query starts*/
 /*media query for 995px starts here*/
+
+@media only screen and (max-width: 2560px) and (min-width: 768px) {
+
+  .nav-items a:hover { color: #53d494; }
+
+  .contact-btn:hover {
+    background-color: #53d494;
+    color: #fff;
+  }
+
+  .get-in-touch-btn a:hover {
+    background-color: transparent;
+    color: #53d494;
+  }
+
+  .day:hover {
+    background-color: #53d494;
+    color: #fff;
+  }
+
+} 
+
+
 @media only screen and (max-width: 2560px) and (min-width: 2000px) {
 
   .banner-title { font-size: 150px; }
