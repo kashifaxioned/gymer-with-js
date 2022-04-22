@@ -282,3 +282,25 @@ function emailValidate(e) {
   }
 } 
 
+
+// hamburger Navbar
+
+
+$(".hamburger-btn").click(showNav)
+$(".close-btn").click(hideNav)
+
+let navSection = $(".nav-section")
+
+function showNav() {
+  $(".hamburger-btn").addClass("hide")
+  navSection.addClass("show")
+  navSection.children().addClass("responsive-nav")
+  $(".contact-btn-div").addClass("responsive-contact-btn")
+}
+
+function hideNav() {
+  $(".hamburger-btn").removeClass("hide")
+  navSection.removeClass("show")
+  navSection.children().removeClass("responsive-nav")
+  $(".contact-btn-div").removeClass("responsive-contact-btn")
+}
