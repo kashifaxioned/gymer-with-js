@@ -40,3 +40,35 @@ function changeTab(e) {
 }
 
 
+// counter functionality for animating the count present in the web page 
+
+let countElement = $(".count")
+let countEle;
+let counterSection = document.querySelector(".counter-section")
+
+
+let observer = new IntersectionObserver((entries) => {
+
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      countElement.map((idx, ele) => {
+        $(ele).prop('Counter', 0).animate({
+          Counter: $(ele).text()
+        }, {
+          duration: 5000,
+          easing: 'swing',
+          step: function (now) {
+            $(ele).text(Math.ceil(now));
+          }
+        });
+      });
+      observer.unobserve(counterSection)
+    }
+  })
+
+
+}, {
+  threshold: .5
+})
+observer.observe(counterSection)
+
