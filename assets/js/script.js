@@ -145,3 +145,35 @@ $(".card-section").slick({
 })
 
 
+// schedule functionality
+
+let day = $(".day")
+let selectDay
+
+// onclick function called when clicked on days
+day.click((e) => {
+  selectDay = $(e.target)
+  day.removeClass("selected")
+  selectDay.addClass("selected")
+  shuffle()
+})
+
+// shuffle the timeTable elements
+function shuffle() {
+  let timeTable = $(".time-table")
+  let timeTableChild = $(".time-table-item")
+  let randomTimeTableChild = []
+  let i = timeTableChild.length
+  let j;
+
+  while (i--) {
+    j = Math.floor(Math.random() * (i + 1))
+    randomTimeTableChild.push(timeTableChild[j])
+    timeTableChild.splice(j, 1)
+  }
+  randomTimeTableChild.map((ele, idx) => {
+    timeTable.append(ele)
+  })
+}
+
+
