@@ -104,6 +104,10 @@ li {
   width: 58%; 
   margin: 0 auto;
 }
+
+* { box-sizing: border-box; }
+
+
 /*=================================
   Header styling starts here
 =================================*/
@@ -132,8 +136,6 @@ li {
   flex-basis: 61.3%;
 }
 
-.control-btn { display: none; }
-
 .nav-section { flex-basis: 48%; }
 
 .nav-list {
@@ -142,7 +144,9 @@ li {
   flex-basis: 90%;
 }
 
-.nav-items a {
+.nav-items button {
+  border: none;
+  background: none;
   color: #fff;
   font-size: 16px;
   text-transform: capitalize;
@@ -153,7 +157,7 @@ li {
   padding-bottom: 3px;
 }
 
-.hamburger-div { display: none; }
+.control-btn-div { display: none; }
 
 .btn {
   border-radius: 5px;
@@ -216,7 +220,7 @@ li {
   counter section styling starts here
 =================================*/
 
-.counter-section { padding: 80px 0; }
+.counter-section { padding: 80px 0 40px; }
 
 .counter-list { display: flex; }
 
@@ -265,7 +269,9 @@ li {
   get in touch styling starts here
 =================================*/ 
 
+
 .get-in-touch-section .wrapper {
+  padding: 40px 0 60px;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -318,18 +324,9 @@ li {
  classes styling ends here
 =================================*/ 
 
-.classes { padding: 175px 0; }
+.classes { padding: 70px 0; }
 
 .section-text { width: 47.5%; }
-
-.gym-slider {
-  display: flex;
-  overflow: hidden;
-}
-
-.slide-img {
-  flex-basis: 20%;
-}
 
 .radio-section {
   margin: 45px 0;
@@ -353,6 +350,8 @@ li {
 /*=================================
  schedule styling starts here
 =================================*/ 
+
+.schedule { padding: 35px 0 75px; }
 
 .day-list {
   display: flex;
@@ -405,7 +404,7 @@ li {
 
 .join-btn {
   border-right: none;
-  flex-basis: 17%;
+  flex-basis: 20%;
   color: #53d494;
   text-align: center;
   text-transform: capitalize;
@@ -419,7 +418,7 @@ li {
  trainers styling starts here
 =================================*/
 
-.trainers-section { padding: 150px 0 200px; }
+.trainers-section { padding: 75px 0; }
 
 .trainers {
   display: flex;
@@ -460,20 +459,17 @@ li {
  service styling starts here
 =================================*/ 
 
-.service { padding-bottom: 50px; }
+.service { padding: 70px 0px; }
 
-.card-section { 
-  display: flex;
-  justify-content: space-between;
-  color: #fff; 
-}
+.card-section { color: #fff; }
 
 .cards {
   box-sizing: border-box;
+  margin-right: 20px;
   padding: 70px 63px;
-  flex-basis: 31.5%;
   background-color: #53d494;
 }
+
 
 .card-title {
   margin: 35px 0;
@@ -498,6 +494,9 @@ li {
 
 .gym::before { content: "\f44b"; }
 
+.diet::before { content: "\f2e7"; }
+
+.cardio::before { content: "\f70c"; }
 
 /*=================================
  service styling ends here
@@ -518,7 +517,7 @@ li {
 .contact-section .wrapper { width: 32.8%; }
 
 .contact-section {
-  padding: 55px 0 100px;
+  padding: 38px 0 100px;
   background-color: #121212;
 }
 
@@ -528,10 +527,9 @@ li {
   justify-content: space-between;
 }
 
-.error { display: none; }
-
 .form-group {
   box-sizing: border-box;
+  margin-bottom: 15px;
   flex-basis: 100%;
   background: none;
 }
@@ -539,15 +537,15 @@ li {
 input, textarea {
   box-sizing: border-box;
   width: 100%;
-  margin-bottom: 15px;
   border: 2px solid #fff;
   padding: 8px 11px;
   background: none;
+  color: #fff;
   font-size: 15px;
   font-family: inherit;
 }
 
-textarea { margin-bottom: 8px; }
+.form-group:last-child { margin-bottom: 8px; }
 
 .form-group-name { flex-basis: calc(50% - 15px); }
 
@@ -560,7 +558,14 @@ textarea { margin-bottom: 8px; }
   line-height: 1;
 }
 
-.error { display: none; }
+.error { 
+  padding-bottom: 12px;
+  color: #FD5D5D;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.error-border { border: 2px solid #FD5D5D; }
 
 /*=================================
   contact styling ends here
@@ -654,7 +659,7 @@ textarea { margin-bottom: 8px; }
 
 @media only screen and (max-width: 2560px) and (min-width: 768px) {
 
-  .nav-items a:hover { color: #53d494; }
+  .nav-items button:hover { color: #53d494; }
 
   .contact-btn:hover {
     background-color: #53d494;
@@ -669,6 +674,11 @@ textarea { margin-bottom: 8px; }
   .day:hover {
     background-color: #53d494;
     color: #fff;
+  }
+
+  .submit-btn:hover {
+    background-color: transparent;
+    color: #53d494;
   }
 
 } 
@@ -772,13 +782,15 @@ textarea { margin-bottom: 8px; }
 
   .count-name, .section-info { font-size: 12px; }
 
-  .classes { padding: 100px 0; }
+  .classes { padding: 70px 0 25px; }
+
+  .schedule { padding: 20px 0; }
 
   .time-table-item p, .time-table-item a { font-size: 14px; }
 
   .day-list { width: 100%; }
 
-  .trainers-section { padding: 80px 0; }
+  .trainers-section { padding: 40px 0; }
 
   .trainers-section .trainer-name { font-size: 20px; }
 
@@ -788,8 +800,6 @@ textarea { margin-bottom: 8px; }
   }
 
   .trainer-info { font-size: 12px; }
-
-  .service { padding-bottom: 0; }
 
   .cards::before { font-size: 33px; }
 
@@ -818,12 +828,14 @@ textarea { margin-bottom: 8px; }
 
   .nav-section { display: none; }
 
-  .control-btn { 
+  .nav-items { margin-right: 20px; }
+
+  .control-btn-div { 
     margin-left: auto;
     display: block;
   }
 
-  .hamburger-btn {
+  .control-btn {
     color: #fff;
     background: none;
     border: none;
@@ -831,12 +843,15 @@ textarea { margin-bottom: 8px; }
     text-indent: -13px;
   }
 
-  .hamburger-btn::after {
+  .control-btn::after {
     color: #fff;
-    content: "\f0c9";
-    font-size: 30px;
+    font-size: 25px;
     font-family: "FontAwesome";
   }
+
+  .hamburger-btn::after { content: "\f0c9";  }
+
+  .close-btn::after { content: "\f054"; }
 
   .contact-btn-div { display: none; }
 
@@ -867,8 +882,6 @@ textarea { margin-bottom: 8px; }
     font-size: 30px; 
   }
 
-  .classes { padding: 80px 0 60px; }
-
   .day {
     padding: 10px 15px;
     font-size: 14px;
@@ -894,7 +907,7 @@ textarea { margin-bottom: 8px; }
 
   .contact-section .wrapper { width: 70%; }
 
-  .footer-info { margin: 80px 0; }
+  .footer-info { margin: 45px 0; }
 
   .footer-info .wrapper {
     width: 50%;
@@ -904,22 +917,48 @@ textarea { margin-bottom: 8px; }
 
   .footer-info .wrapper > div { margin: 10px 0; }
 
-  .copyright {padding: 50px; }
+  .copyright {padding: 30px 0; }
+
+
+.show { display: block; }
+
+.responsive-nav {
+  height: 100vh;
+  padding: 110px 40px 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 30px;
+  position: absolute;
+  right: -6%;
+  top: -22px;
+  bottom: 0;
+  z-index: 2;
+  background-color: #000;
+  animation: fade 1s ease-in-out;
+}
+
+.responsive-contact-btn {
+  display: block;
+  position: relative;
+  z-index: 2;
+  animation: fade 1s ease-in-out;
+}
 
 }  
 
 /*media query for 768px ends here*/
 
 
-/*media query for 425px starts here*/
+/*media query for 500px starts here*/
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 500px) {
 
   .banner-title { font-size: 50px; }
 
   .counter-list { 
     justify-content: space-between;
     flex-wrap: wrap; 
+    gap: 20px;
   }
 
   .counter-item { flex-basis: 40%; }  
@@ -932,12 +971,12 @@ textarea { margin-bottom: 8px; }
   .section-text { width: 90%; }
 
   .get-in-touch-section .wrapper { 
-    padding-bottom: 90px;
-    flex-direction: column; }
+    flex-direction: column; 
+  }
 
   .get-in-touch-img img { width: 100%; }
 
-  .get-in-touch-btn { bottom: 0; }
+  .get-in-touch-btn { bottom: -10px; }
 
   .gym-classes { padding: 20px; }
 
@@ -984,3 +1023,179 @@ textarea { margin-bottom: 8px; }
 }
 
 /*media query for 425px ends here*/
+
+
+/* animation */
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+/* styling for js */
+
+.hide { display: none; }
+
+.fade { animation: fade 1s ease-in-out ; }
+
+
+/* Slick Slider */
+.slick-slider
+{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    /* cursor: hand; */
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+/* Slider */
+
+
+
+/* Dots */
+
+.slick-dots
+{
+    position: absolute;
+    bottom: -35px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+.slick-dots li
+{
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    padding: 0;
+}
+.slick-dots li button
+{
+    font-size: 0;
+    padding: 5px;
+    border: none;
+    border-radius: 50%;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+    outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+{
+    opacity: 1;
+}
+.slick-dots li.slick-active button
+{
+    background-color: #53d494;
+}
