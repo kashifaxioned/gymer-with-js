@@ -177,3 +177,108 @@ function shuffle() {
 }
 
 
+// form validation
+
+let formElements = $(".contact-form .form-group")
+let fName = $(".first-name")
+let lName = $(".last-name")
+let subject = $(".subject")
+let email = $(".email")
+let subEmail = $(".subscribe-form .form-group input")
+let val;
+let nameAttr;
+
+// validation for subscribe form for no input
+
+$(".sub-btn").click((e) => {
+  e.preventDefault()
+  $(".error").addClass("hide")
+  validate(subEmail)
+})
+
+// validation for contact form for no input
+
+$(".submit-btn").click((e) => {
+  e.preventDefault()
+  $(".error").addClass("hide")
+  formElements.map((idx, ele) => {
+    formEle = $(ele).children(":first-child")
+    validate(formEle)
+  })
+})
+
+// validation function for no input
+function validate(formEle) {
+  formEle.removeClass("error-border")
+  val = formEle.val()
+  if (val.length === 0) {
+    emptyValidate(formEle)
+  }
+}
+
+// function for selecting the target element
+function emptyValidate(formEle) {
+  nameAttr = formEle.attr("name")
+  switch (nameAttr) {
+    case "First Name":
+    case "Last Name":
+    case "Subject":
+    case "Email":
+    case "Subscribe Email":
+    case "Message":
+      noValue(nameAttr)
+    default:
+      break;
+  }
+}
+
+// function for DOM manipulation after validating
+function noValue(name) {
+  $(`input[name = "${name}"]`).addClass("error-border").next().removeClass("hide").html(`Please write your ${name}`)
+  $(`textarea[name = "${name}"]`).addClass("error-border").next().removeClass("hide").html(`Please write your ${name}`)
+}
+
+// on focus validtaion
+fName.on("blur", function(e) { stringValidate(e) })
+lName.on("blur", function(e) { stringValidate(e) })
+subject.on("blur", function(e) { stringValidate(e) })
+email.on("blur", function(e) { emailValidate(e) })
+subEmail.on("blur", function(e) { emailValidate(e) })
+
+
+//  regular expression for string and email
+let strRegEx = /^[A-Za-z]+$/
+let emailRegEx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+let targetElement;
+
+// function for string validation
+function stringValidate(e) {
+  targetElement = $(e.target)
+  if ((targetElement.val().length < 12) && (targetElement.val().length > 3)) {
+    targetElement.removeClass("error-border").next().addClass("hide")
+    if(strRegEx.test(targetElement.val())){
+      targetElement.removeClass("error-border").next().addClass("hide")
+    }else {
+      targetElement.addClass("error-border").next().removeClass("hide").html(`${targetElement.attr("name")} should contain only characters`)
+    }
+  }else {
+    targetElement.addClass("error-border").next().removeClass("hide").html(`${targetElement.attr("name")} is to small`)
+  }
+}
+
+// function for email validation
+function emailValidate(e) {
+  targetElement = $(e.target)
+
+  if ((targetElement.val().length > 6)) {
+    targetElement.removeClass("error-border").next().addClass("hide")
+    if(emailRegEx.test(targetElement.val())){
+      targetElement.removeClass("error-border").next().addClass("hide")
+    }else {
+      targetElement.addClass("error-border").next().removeClass("hide").html(`${targetElement.attr("name")} is incorrect`)
+    }
+  }else {
+    targetElement.addClass("error-border").next().removeClass("hide").html(`${targetElement.attr("name")} is to small`)
+  }
+} 
+
