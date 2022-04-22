@@ -188,11 +188,12 @@ let subEmail = $(".subscribe-form .form-group input")
 let val;
 let nameAttr;
 
+
 // validation for subscribe form for no input
 
 $(".sub-btn").click((e) => {
-  e.preventDefault()
   $(".error").addClass("hide")
+  e.preventDefault()
   validate(subEmail)
 })
 
@@ -209,7 +210,7 @@ $(".submit-btn").click((e) => {
 
 // validation function for no input
 function validate(formEle) {
-  formEle.removeClass("error-border")
+  $(".error-border").removeClass("error-border")
   val = formEle.val()
   if (val.length === 0) {
     emptyValidate(formEle)
