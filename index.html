@@ -19,16 +19,17 @@
     rel="stylesheet">
   <!-- jquery link for functionalities -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <!-- slick slider css styling  -->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
   <link rel="stylesheet" media="screen" href="assets/css/style.css">
+   <!-- slick slider css styling  -->
+   <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
+   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
 <body>
   <!--container start-->
   <div class="container">
-    <!--header section start-->
+    <!--header section start--> 
     <header class="header-section">
       <div class="wrapper">
         <h1 class="logo">
@@ -36,21 +37,24 @@
             <img src="https://via.placeholder.com/67x20.png/fff?text=Gymer" alt="logo"></a>
         </h1>
         <div class="menu-section">
-          <nav class="nav-section">
+          <nav class="nav-section ">
             <ul class="nav-list">
-              <li class="nav-items active"><a href="/" title="Home">home</a></li>
-              <li class="nav-items"><a href="#classes" title="Classes">classes</a></li>
-              <li class="nav-items"><a href="#schedule" title="Schedule">schedule</a></li>
-              <li class="nav-items"><a href="#trainers" title="Trainer">trainer</a></li>
-              <li class="nav-items"><a href="#services" title="Services">services</a></li>
+              <div class="control-btn-div">
+                <button class="close-btn control-btn">1</button>
+              </div>
+              <li class="nav-items active"><button type="button"  name="home">home</button></li>
+              <li class="nav-items"><button type="button" name="classes">classes</button></li>
+              <li class="nav-items"><button type="button" name="schedule">schedule</button></li>
+              <li class="nav-items"><button type="button" name="trainers">trainer</button></li>
+              <li class="nav-items"><button type="button" name="services">services</button></li>
             </ul>
           </nav>
-          <div class="control-btn">
-            <button class="hamburger-btn">1</button>
+          <div class="control-btn-div">
+            <button class="hamburger-btn control-btn">1</button>
           </div>
         </div>
         <div class="contact-btn-div">
-          <a href="#FIXME" title="Contact" target="_self" class="contact-btn btn">contact</a>
+          <a href="#contact" title="Contact" target="_self" class="contact-btn btn">contact</a>
         </div>
       </div>
     </header>
@@ -70,7 +74,7 @@
           <ul class="counter-list">
             <li class="counter-item members">
               <div class="counter-item-data">
-                <span class="count">2,260</span>
+                <span class="count">2260</span>
                 <span class="count-name">members</span>
               </div>
             </li>
@@ -88,7 +92,7 @@
             </li>
             <li class="counter-item heart-beat">
               <div class="counter-item-data">
-                <span class="count">1,920</span>
+                <span class="count">1920</span>
                 <span class="count-name">heart beat</span>
               </div>
             </li>
@@ -156,10 +160,7 @@
               </figure>
             </li>
           </ul>
-        <div class="radio-section">
-            <button type="button" class="gym-slider-radio-btn radio-btn active-slide"></button>
-            <button type="button" class="gym-slider-radio-btn radio-btn"></button>
-          </div>
+      
       </section>
       <!--classes section end-->
       <!--schedule section start-->
@@ -307,11 +308,18 @@
                 fugit, minus
                 harum nobis similique.</p>
             </li>
+            <li class="cards diet">
+              <h3 class="card-title">diet</h3>
+              <p class="card-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas quia
+                fugit, minus
+                harum nobis similique.</p>
+            </li> <li class="cards cardio">
+              <h3 class="card-title">cardio</h3>
+              <p class="card-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas quia
+                fugit, minus
+                harum nobis similique.</p>
+            </li>
           </ul>
-        </div>
-        <div class="radio-section">
-          <button type="button" class="radio-btn active-slide"></button>
-          <button type="button" class="radio-btn"></button>
         </div>
       </section>
       <!-- service section start -->
@@ -328,24 +336,24 @@
             consect adipisicing elit. Officia, recusandae.</p>
           <form action="/" class="contact-form">
             <div class="form-group form-group-name">
-              <input type="text" name="fName" value="" placeholder="First Name">
-              <span class="error">error</span>
+              <input type="text" name="First Name" class="first-name" value="" placeholder="First Name">
+              <span class="error hide">error</span>
             </div>
             <div class="form-group form-group-name">
-              <input type="text" name="lName" value="" placeholder="Last Name">
-              <span class="error">error</span>
+              <input type="text" name="Last Name" class="last-name" value="" placeholder="Last Name">
+              <span class="error hide">error</span>
             </div>
             <div class="form-group">
-              <input type="text" name="subject" value="" placeholder="Subject">
-              <span class="error">error</span>
+              <input type="text" name="Subject" class="subject" value="" placeholder="Subject">
+              <span class="error hide">error</span>
             </div>
             <div class="form-group">
-              <input type="email" name="email" value="" placeholder="Email">
-              <span class="error">error</span>
+              <input type="email" name="Email" class="email" value="" placeholder="Email">
+              <span class="error hide">error</span>
             </div>
             <div class="form-group">
-              <textarea name="message" cols="30" rows="10" placeholder="Write your message here."></textarea>
-              <span class="error">error</span>
+              <textarea name="Message" cols="30" rows="10" placeholder="Write your message here."></textarea>
+              <span class="error hide">error</span>
             </div>
             <div class="form-control">
               <button type="submit" class="btn submit-btn">send message</button>
@@ -378,7 +386,8 @@
             </p>
             <form action="/" class="subscribe-form">
               <div class="form-group">
-                <input type="email" name="email" value="" placeholder="Email">
+                <input type="email" name="Subscribe Email" value="" placeholder="Email">
+                <span class="error hide">error</span>
               </div>
               <div class="form-control">
                 <button type="submit" class="btn sub-btn">subscribe</button>
